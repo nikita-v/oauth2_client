@@ -289,5 +289,5 @@ add_auth_header(Headers, #client{grant_type = <<"azure_client_credentials">>,
     AH = {<<"Authorization">>, <<"bearer ", AccessToken/binary>>},
     [AH | proplists:delete(<<"Authorization">>, Headers)];
 add_auth_header(Headers, #client{access_token = AccessToken}) ->
-    AH = {<<"Authorization">>, <<"token ", AccessToken/binary>>},
+    AH = {<<"Authorization">>, <<"bearer ", AccessToken/binary>>},
     [AH | proplists:delete(<<"Authorization">>, Headers)].
