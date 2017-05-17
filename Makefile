@@ -1,4 +1,4 @@
-REBAR=rebar
+REBAR=./rebar
 DEPS_PLT=$(CURDIR)/.deps_plt
 DEPS=erts kernel crypto stdlib inets crypto asn1 public_key ssl
 
